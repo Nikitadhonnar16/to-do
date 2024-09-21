@@ -1,0 +1,46 @@
+.task-list-wrapper {
+  /* display: flex;
+  justify-content: start; */
+  margin-top: 100px;
+  border: 1px solid black;
+}
+
+.btn-new,
+.btn-refresh {
+  padding: 5px 30px !important;
+  border: 1px solid grey !important;
+  background-color: white;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+.btn-new:hover,
+.btn-refresh:hover {
+  background-color: rgb(235, 235, 182) !important;
+  border-color: rgb(190, 190, 21) !important;
+}
+
+.search {
+  border: 1px solid #a5a5a8;
+  width: 243px;
+  padding: 6px !important;
+}
+
+.search-field {
+  border: none;
+  outline: none;
+  /* background-color: #e0e0e1; */
+}
+
+.table-list {
+  border-bottom: 1px solid #f3f3f4;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.list-heading {
+  color: rgb(111, 111, 231);
+}
