@@ -1,7 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const EditTask = ({ show, onClose, onUpdateTask, initialData }) => {
-  const [task, setTask] = useState(initialData);
+  const [task, setTask] = useState({
+    name: "",
+    status: "",
+    due_date: "",
+    priority: "",
+    comments: "",
+    ...initialData, // If initialData is provided, it will override the defaults
+  });
+
+  useEffect(() => {
+    if (initialData) {
+      setTask(initialData); // Update task when initialData changes
+    }
+  }, [initialData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +44,7 @@ const EditTask = ({ show, onClose, onUpdateTask, initialData }) => {
             <h5 className="modal-title mx-auto text-center">Edit Task</h5>
             <button
               type="button"
-              className="close"
+              className="btn btn-md close p-0 fs-2"
               onClick={onClose}
               aria-label="Close"
             >
@@ -42,7 +55,7 @@ const EditTask = ({ show, onClose, onUpdateTask, initialData }) => {
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="taskName" className="form-label">
-                  Task Name
+                  <span className="text-danger">*</span>Assigned To
                 </label>
                 <input
                   type="text"
@@ -53,61 +66,77 @@ const EditTask = ({ show, onClose, onUpdateTask, initialData }) => {
                   onChange={handleChange}
                 />
               </div>
-              <div className="mb-3">
-                <label htmlFor="taskStatus" className="form-label">
-                  Status
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="taskStatus"
-                  name="status"
-                  value={task.status}
-                  onChange={handleChange}
-                />
+
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="taskStatus" className="form-label">
+                    <span className="text-danger">*</span> Status
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="taskStatus"
+                    name="status"
+                    value={task.status}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="dueDate" className="form-label">
+                    Due Date
+                  </label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    id="dueDate"
+                    name="due_date"
+                    value={task.due_date}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="dueDate" className="form-label">
-                  Due Date
-                </label>
-                <input
-                  type="date"
-                  className="form-control"
-                  id="dueDate"
-                  name="due_date"
-                  value={task.due_date}
-                  onChange={handleChange}
-                />
+
+              <div className="row">
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="priority" className="form-label">
+                    <span className="text-danger">*</span> Priority
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="priority"
+                    name="priority"
+                    value={task.priority}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="col-md-6 mb-3">
+                  <label htmlFor="comments" className="form-label">
+                    Comments
+                  </label>
+                  <textarea
+                    className="form-control"
+                    id="comments"
+                    name="comments"
+                    rows="2"
+                    value={task.comments}
+                    onChange={handleChange}
+                  ></textarea>
+                </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="priority" className="form-label">
-                  Priority
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="priority"
-                  name="priority"
-                  value={task.priority}
-                  onChange={handleChange}
-                />
+
+              <div className="d-flex justify-content-end">
+                <button
+                  type="button"
+                  className="btn btn-warning me-2"
+                  onClick={onClose}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="btn btn-success ">
+                  Save
+                </button>
               </div>
-              <div className="mb-3">
-                <label htmlFor="comments" className="form-label">
-                  Comments
-                </label>
-                <textarea
-                  className="form-control"
-                  id="comments"
-                  name="comments"
-                  rows="3"
-                  value={task.comments}
-                  onChange={handleChange}
-                ></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Update Task
-              </button>
             </form>
           </div>
         </div>

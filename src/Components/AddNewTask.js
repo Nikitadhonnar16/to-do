@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../assets/css/AddNewTask.css";
 
 const AddNewTask = ({ show, onClose, onAddTask }) => {
   const [taskName, setTaskName] = useState("");
@@ -33,10 +34,10 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
       >
         <div className="modal-content">
           <div className="modal-header justify-content-center">
-            <h5 className="modal-title mx-auto text-center">ADD New Task</h5>
+            <h5 className="modal-title mx-auto text-center">New Task</h5>
             <button
               type="button"
-              className="close"
+              className="btn btn-md close p-0 fs-2"
               onClick={onClose}
               aria-label="Close"
             >
@@ -48,7 +49,7 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
               <div className="row mb-3">
                 <div className="col">
                   <label htmlFor="taskName" className="form-label">
-                    Task Name
+                    <span className="text-danger">*</span>Assigned To
                   </label>
                   <input
                     type="text"
@@ -60,7 +61,7 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
                 </div>
                 <div className="col">
                   <label htmlFor="taskStatus" className="form-label">
-                    Status
+                    <span className="text-danger">*</span> Status
                   </label>
                   <input
                     type="text"
@@ -86,7 +87,7 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
                 </div>
                 <div className="col">
                   <label htmlFor="priority" className="form-label">
-                    Priority
+                    <span className="text-danger">*</span> Priority
                   </label>
                   <input
                     type="text"
@@ -100,7 +101,7 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
               <div className="row mb-3">
                 <div className="col">
                   <label htmlFor="comments" className="form-label">
-                    Comments
+                    Description
                   </label>
                   <textarea
                     className="form-control"
@@ -111,9 +112,23 @@ const AddNewTask = ({ show, onClose, onAddTask }) => {
                   ></textarea>
                 </div>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Add Task
-              </button>
+              <div className="d-flex justify-content-end">
+                <button
+                  type="button"
+                  className="btn me-2"
+                  onClick={onClose}
+                  style={{
+                    backgroundColor: "rgb(255, 190, 50)",
+                    borderColor: "rgb(255, 190, 50)",
+                  }}
+                >
+                  Cancel
+                </button>
+
+                <button type="submit" className="btn btn-success">
+                  Save
+                </button>
+              </div>
             </form>
           </div>
         </div>

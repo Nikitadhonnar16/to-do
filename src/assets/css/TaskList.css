@@ -20,7 +20,7 @@
 .btn-new:hover,
 .btn-refresh:hover {
   background-color: rgb(235, 235, 182) !important;
-  border-color: rgb(190, 190, 21) !important;
+  border-color: rgb(245, 214, 146) !important;
 }
 
 .search {
@@ -43,4 +43,20 @@
 
 .list-heading {
   color: rgb(111, 111, 231);
+}
+
+/* .btn-warning {
+  background-color: rgb(255, 190, 50);
+} */
+
+.custom-dropdown-item {
+  transition: background-color 0.3s ease; /* Optional for a smooth transition */
+}
+
+.custom-dropdown-item:hover {
+  background-color: rgb(
+    245,
+    214,
+    146
+  ) !important; /* Change background color on hover */
 }
