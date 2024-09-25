@@ -5,7 +5,7 @@
 In this project, I have created a User Data Management System web App using React JS, Javascirpt, CSS, Bootstrap, HTML and css.
 features like pagination, search, and filtering, all handled on the frontend.using HTML, CSS, JavaScript and React Js
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/TaskList.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/task_list.png)
 
 ## To start a project
 
