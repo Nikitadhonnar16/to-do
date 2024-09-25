@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task List Management System
 
 =================
@@ -42,3 +43,6 @@ Open a brower and type below:
 ## Pagination View
 
 ![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/Pagination.png)
+=======
+
+>>>>>>> 57369ab0f5b62f43a9245a3f62ed6248e9b3bbfc
