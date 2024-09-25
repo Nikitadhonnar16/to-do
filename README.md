@@ -21,24 +21,24 @@ Open a brower and type below:
 
 ## List View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/TaskList.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/TaskList.png)
 
 ## ADD New Task View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/NewTask.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/NewTask.png)
 
 ## Edit Task View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/EditTask.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/EditTask.png)
 
 ## Delete Task View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/DeleteTask.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/DeleteTask.png)
 
 ## Search Functionality View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/Search.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/Search.png)
 
 ## Pagination View
 
-![](https://github.com/Nikitadhonnar16/to-do/blob/main/imgs/Pagination.png)
+![](https://github.com/Nikitadhonnar16/to-do/blob/master/imgs/Pagination.png)
