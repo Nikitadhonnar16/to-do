@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Task List Management System
 
 =================
